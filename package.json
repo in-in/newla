@@ -4,18 +4,23 @@
     "stylelint": ".config/stylelint.json"
   },
   "scripts": {
+    "start": "npm-run-all clean build -p watch serve",
+    "clean": "rm -rf dist/",
     "build": "npm-run-all build:*",
-    "prebuild": "rm -rf dist/",
-    "build:html": "pug src -o dist/",
+    "prebuild:css": "npm-run-all lint",
+    "build:html": "pug src/*.pug -o dist/",
     "build:css": "postcss -c .config/postcss.json -d dist src/style.css",
     "lint": "npm-run-all lint:*",
     "prelint:css": "stylefmt -c $npm_package_config_stylelint src/style.css src/style.css",
     "lint:css": "stylelint 'src/*.css' --config $npm_package_config_stylelint",
     "watch": "npm-run-all -p watch:*",
-    "watch:html": "chokidar 'src/*.pug' -c 'npm run build:html'"
+    "watch:html": "chokidar 'src/**/*.pug' -c 'npm run build:html'",
+    "watch:css": "chokidar 'src/*.css' -c 'npm run build:css'",
+    "serve": "browser-sync start -c .config/bs-config.js -s 'dist' -f 'dist'"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
+    "browser-sync": "^2.18.7",
     "chokidar-cli": "^1.2.0",
     "npm-run-all": "^4.0.1",
     "postcss-cli": "^2.6.0",

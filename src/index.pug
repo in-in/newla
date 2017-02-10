@@ -1,14 +1,5 @@
-doctype html
-html(lang="en")
-  head
-    title pageTitle
-  body
-    h1 Pug - node template engine
-    #container.col
-      if youAreUsingPug
-        p You are amazing bar
-      else
-        p Get on it!
-      p.
-        Pug is a terse and simple templating language with a
-        strong focus on performance and powerful features.
+extends blocks/layout/layout
+include blocks/price-list/price-list
+
+block content
+  +price-list()
