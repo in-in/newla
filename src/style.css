@@ -1,0 +1,25 @@
+.cf::after {
+  display: block;
+  clear: both;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+  content: '';
+}
+
+.lang_selector .lang_list {
+  z-index: 100;
+}
+
+#bluemap h2 {
+  margin: 45px 0 35px;
+}
+
+#bluemap .three_columns .column {
+  display: inline-block;
+  float: none;
+}
+
+.foo {
+  display: flex;
+}
