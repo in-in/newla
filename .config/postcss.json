@@ -1,5 +1,7 @@
 {
   "use": [
+    "postcss-easy-import",
+    "postcss-custom-properties",
     "autoprefixer"
   ],
   "autoprefixer": {

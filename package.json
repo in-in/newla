@@ -5,17 +5,22 @@
   },
   "scripts": {
     "start": "npm-run-all clean build -p watch serve",
+    
     "clean": "rm -rf dist/",
+    
     "build": "npm-run-all build:*",
     "prebuild:css": "npm-run-all lint",
     "build:html": "pug src/*.pug -o dist/",
-    "build:css": "postcss -c .config/postcss.json -d dist src/style.css",
+    "build:css": "postcss -c .config/postcss.json -d dist src/styles/*.css",
+    
     "lint": "npm-run-all lint:*",
-    "prelint:css": "stylefmt -c $npm_package_config_stylelint src/style.css src/style.css",
-    "lint:css": "stylelint 'src/*.css' --config $npm_package_config_stylelint",
+    "prelint:css": "stylefmt -c $npm_package_config_stylelint -r 'src/**/*.css'",
+    "lint:css": "stylelint 'src/**/*.css' --config $npm_package_config_stylelint",
+    
     "watch": "npm-run-all -p watch:*",
     "watch:html": "chokidar 'src/**/*.pug' -c 'npm run build:html'",
-    "watch:css": "chokidar 'src/*.css' -c 'npm run build:css'",
+    "watch:css": "chokidar 'src/**/*.css' -c 'npm run build:css'",
+    
     "serve": "browser-sync start -c .config/bs-config.js -s 'dist' -f 'dist'"
   },
   "devDependencies": {
@@ -24,6 +29,8 @@
     "chokidar-cli": "^1.2.0",
     "npm-run-all": "^4.0.1",
     "postcss-cli": "^2.6.0",
+    "postcss-custom-properties": "^5.0.2",
+    "postcss-easy-import": "^2.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "stylefmt": "^5.1.1",
     "stylelint": "^7.8.0"

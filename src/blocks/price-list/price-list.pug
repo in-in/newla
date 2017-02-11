@@ -1,6 +1,30 @@
 include ../price-list-title/price-list-title
+include ../price-list-subtitle/price-list-subtitle
+include ../price-list-table/price-list-table
+include ../price-list-note/price-list-note
 
 mixin price-list()
-  .price-list
-    p price-list
-    +price-list-title()
+  .price-list&attributes(attributes)
+    +price-list-title('Придайте вашему роботу индивидуальности!')
+    +price-list-subtitle('Мы&nbsp;настроим его под ваши нужды при производстве')
+    +price-list-table(
+      [
+        {'header': 'Наименование'},
+        {'header': 'Promobot V.2, V.2+'},
+        {'header': 'Promobot V.3'}
+      ], 
+      [
+        {
+          'option': 'Загрузка в&nbsp;робота дополнительной информации при производстве (зазывные речевые модули, фото, видео)',
+          'price': ['22&nbsp;000&nbsp;руб.', '10&nbsp;900&nbsp;руб.']
+        },
+        {
+          'option': 'Выстраивание продающего диалога при производстве (при ответе на&nbsp;отвлеченные вопросы упоминать товары&nbsp;/ услуги Заказчика, а&nbsp;также выстраивать диалог так, чтобы предлагать товары и&nbsp;услуги Заказчика)',
+          'price': ['82&nbsp;500&nbsp;руб.', '41&nbsp;000&nbsp;руб.']
+        }
+      ]
+    )
+    +price-list-title('Или выберите готовую комплектацию')
+    //- +price-list-table()
+    +price-list-note('Для перевозки робота вы&nbsp;можете приобрести транспортировочный кофр за&nbsp;49&nbsp;500&nbsp;руб.')
+    +price-list-note('(для Promobot V.2&nbsp;/ Promobot V.2+), 45&nbsp;000&nbsp;руб. (для Promobot V.3)')

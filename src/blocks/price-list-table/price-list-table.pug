@@ -1,0 +1,14 @@
+mixin price-list-table(header, body)
+  table.price-list-table&attributes(attributes)
+    tr.price-list-table__row
+      each i in header
+        th.price-list-table__header
+          span!= i.header
+    each j in body
+      tr.price-list-table__row
+        td.price-list-table__cell.price-list-table__cell--option
+          span!= j.option
+        if j.price
+          each value in j.price
+            td.price-list-table__cell.price-list-table__cell--price
+              span!= value

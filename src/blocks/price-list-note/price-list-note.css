@@ -1,0 +1,6 @@
+.price-list-note {
+  display: block;
+  color: var(--mainColor);
+  font-weight: 700;
+  font-size: 20px;
+}
