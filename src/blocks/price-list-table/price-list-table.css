@@ -26,6 +26,10 @@
   border-left: 1px solid currentColor;
 }
 
+.price-list-table .price-list-table__row + .price-list-table__row .price-list-table__header {
+  border-top: 1px solid currentColor;
+}
+
 .price-list-table__cell {
   padding-top: 14px;
   padding-right: 22px;
@@ -51,4 +55,20 @@
   text-transform: uppercase;
   font-weight: 700;
   font-size: 25px;
+}
+
+/* price-list-table--custom */
+
+.price-list-table--custom .price-list-table__header {
+  height: auto;
+}
+
+.price-list-table--custom .price-list-table__row:first-child .price-list-table__header:first-child {
+  width: 270px;
+}
+
+.price-list-table--custom .price-list-table__cell--price {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 23px;
 }

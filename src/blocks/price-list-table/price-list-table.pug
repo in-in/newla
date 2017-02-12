@@ -1,14 +1,20 @@
+include ../price-list-note/price-list-note
+
 mixin price-list-table(header, body)
   table.price-list-table&attributes(attributes)
-    tr.price-list-table__row
-      each i in header
-        th.price-list-table__header
-          span!= i.header
+    each row in header
+      tr.price-list-table__row
+        each i in row
+          th(rowspan=i.rowspan, colspan=i.colspan).price-list-table__header
+            span!= i.header
+            if i.note
+              +price-list-note(i.note).price-list-note--cell
     each j in body
       tr.price-list-table__row
         td.price-list-table__cell.price-list-table__cell--option
           span!= j.option
-        if j.price
-          each value in j.price
-            td.price-list-table__cell.price-list-table__cell--price
-              span!= value
+        each k in j.price
+          td(colspan=k.colspan).price-list-table__cell.price-list-table__cell--price
+            span!= k.value
+            if k.note
+              +price-list-note(k.note).price-list-note--cell.price-list-note--dark

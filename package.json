@@ -5,22 +5,17 @@
   },
   "scripts": {
     "start": "npm-run-all clean build -p watch serve",
-    
     "clean": "rm -rf dist/",
-    
     "build": "npm-run-all build:*",
     "prebuild:css": "npm-run-all lint",
     "build:html": "pug src/*.pug -o dist/",
     "build:css": "postcss -c .config/postcss.json -d dist src/styles/*.css",
-    
     "lint": "npm-run-all lint:*",
     "prelint:css": "stylefmt -c $npm_package_config_stylelint -r 'src/**/*.css'",
     "lint:css": "stylelint 'src/**/*.css' --config $npm_package_config_stylelint",
-    
     "watch": "npm-run-all -p watch:*",
     "watch:html": "chokidar 'src/**/*.pug' -c 'npm run build:html'",
     "watch:css": "chokidar 'src/**/*.css' -c 'npm run build:css'",
-    
     "serve": "browser-sync start -c .config/bs-config.js -s 'dist' -f 'dist'"
   },
   "devDependencies": {
