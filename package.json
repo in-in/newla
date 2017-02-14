@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
-    "browser-sync": "^2.18.7",
+    "browser-sync": "^2.18.8",
     "chokidar-cli": "^1.2.0",
     "npm-run-all": "^4.0.1",
     "postcss-cli": "^2.6.0",
