@@ -1,4 +1,6 @@
 extends blocks/layout/layout
 
+include blocks/test-block/test-block
+
 block content
-  p foo
+  +test-block()

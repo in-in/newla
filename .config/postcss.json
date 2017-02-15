@@ -2,7 +2,10 @@
   "use": [
     "postcss-easy-import",
     "postcss-custom-properties",
-    "autoprefixer"
+    "postcss-custom-media",
+    "postcss-media-minmax",
+    "autoprefixer",
+    "postcss-csso"
   ],
   "autoprefixer": {
     "browsers": "last 10 versions"

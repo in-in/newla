@@ -1,3 +1,5 @@
 :root {
   --mainColor: hotpink;
 }
+
+@custom-media --l (width <= 960px)

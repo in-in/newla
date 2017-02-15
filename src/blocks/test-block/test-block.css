@@ -1,0 +1,11 @@
+.test-block {
+  border: 1px solid;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+@media (--l) {
+  .test-block {
+    border: 1px dashed;
+  }
+}
