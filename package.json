@@ -9,7 +9,8 @@
     "clean": "rm -rf dist/",
     
     "build": "npm-run-all build:*",
-    "prebuild:css": "npm-run-all lint",
+    "prebuild:css": "npm-run-all lint:css",
+    "prebuild:pug": "npm-run-all lint:pug",
     "build:pug": "pug src/*.pug -o dist/",
     "build:css": "postcss -c .config/postcss.json -d dist src/styles/*.css",
     
@@ -17,8 +18,7 @@
     "image:optim": "imagemin src/assets/images/* --out-dir=dist/assets/images --plugin=jpeg-recompress --plugin=pngquant",
     
     "lint": "npm-run-all lint:*",
-    "lint:pug": "pug-lint -c .config/.pug-lintrc.json src/index.pug",
-    
+    "lint:pug": "pug-lint -c .config/.pug-lintrc.json src/",
     "prelint:css": "stylefmt -c $npm_package_config_stylelint -i $npm_package_config_stylelintignore -r 'src/**/*.css'",
     "lint:css": "stylelint 'src/**/*.css' -i $npm_package_config_stylelintignore --config $npm_package_config_stylelint",
     
