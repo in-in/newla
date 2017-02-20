@@ -1,0 +1,11 @@
+mixin picture(images)
+  picture.picture&attributes(attributes)
+    - var path = 'assets/images/'
+    each img in images
+      each width in img.width
+        source(
+          srcset=path + img.name + '_' + width + '.jpg'
+          media='(min-width: ' + width + 'px)')
+      img.picture__img(
+        src=path + img.name + '_' + img.width[0] + '.jpg'
+        alt='')

@@ -1,3 +1,5 @@
+include ../picture/picture.pug
+
 mixin test-block()
   .test-block&attributes(attributes)
     p I am test-block
@@ -6,3 +8,11 @@ mixin test-block()
       each i, index in Array(4)
         - var x = index + 1
         div(class='box' + x)= x
+    .sharp
+      p responsive images:
+      +picture([
+        {
+          "name": "image1",
+          "width": [ 900, 700, 500, 300 ]
+        }
+      ])
