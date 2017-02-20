@@ -5,8 +5,9 @@
   font-size: 2em;
 }
 
-.sprites {
+.icons {
   display: flex;
+  justify-content: center;
 }
 
 [class^=box] {
@@ -15,22 +16,24 @@
   box-sizing: border-box;
   margin: .5em;
   border: 1px solid #000;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
 .box1 {
-  background: url(assets/images/mid.png) no-repeat 0 0;
+  background-image: inline('assets/images/icon-upload.png');
 }
 
 .box2 {
-  background: url(assets/images/desktop.png) no-repeat 0 0;
+  background-image: inline('assets/images/icon-desktop.png');
 }
 
 .box3 {
-  background: url(assets/images/maps.png) no-repeat 0 0;
+  background-image: inline('assets/images/icon-maps.png');
 }
 
 .box4 {
-  background: url(assets/images/tools2.png) no-repeat 0 0;
+  background-image: inline('assets/images/icon-tools2.png');
 }
 
 @media (--l) {

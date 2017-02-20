@@ -4,14 +4,12 @@
     "postcss-custom-properties",
     "postcss-custom-media",
     "postcss-media-minmax",
-    "postcss-sprites",
+    "postcss-assets",
     "autoprefixer",
     "postcss-csso"
   ],
-  "postcss-sprites": {
-    "stylesheetPath": "dist/style.css",
-    "spritePath": "dist/assets/images/",
-    "basePath": ""
+  "postcss-assets": {
+    "basePath": "src/"
   },
   "autoprefixer": {
     "browsers": "last 10 versions"
