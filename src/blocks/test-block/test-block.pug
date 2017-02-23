@@ -7,7 +7,7 @@ mixin test-block()
       p icons:
       each i, index in Array(4)
         - var x = index + 1
-        div(class='box' + x)= x
+        div(class='box' + x)
     .sharp
       p responsive images:
       +picture([

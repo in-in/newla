@@ -11,29 +11,42 @@
 }
 
 [class^=box] {
-  width: 3em;
-  height: 3em;
+  width: 64px;
+  height: 64px;
   box-sizing: border-box;
   margin: .5em;
   border: 1px solid #000;
   background-position: center bottom;
+  background-size: auto;
   background-repeat: no-repeat;
 }
 
 .box1 {
-  background-image: inline('assets/images/icon-upload.png');
+  background-image: inline('assets/images/icon-upload_64.png');
 }
 
 .box2 {
-  background-image: inline('assets/images/icon-desktop.png');
+  background-image: inline('assets/images/icon-desktop_64.png');
 }
 
 .box3 {
-  background-image: inline('assets/images/icon-maps.png');
+  background-image: inline('assets/images/icon-maps_64.png');
 }
 
 .box4 {
-  background-image: inline('assets/images/icon-tools2.png');
+  background-image: inline('assets/images/icon-tools2_64.png');
+}
+
+@media (max-resolution: 2dppx) {
+  .box1 {
+    background-image: inline('assets/images/icon-upload_128@2x.png');
+  }
+}
+
+@media (max-resolution: 3dppx) {
+  .box1 {
+    background-image: inline('assets/images/icon-upload_192@3x.png');
+  }
 }
 
 @media (--l) {
