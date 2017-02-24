@@ -7,6 +7,7 @@
 
 .icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -17,7 +18,7 @@
   margin: .5em;
   border: 1px solid #000;
   background-position: center bottom;
-  background-size: auto;
+  background-size: 64px 64px;
   background-repeat: no-repeat;
 }
 
@@ -37,13 +38,13 @@
   background-image: inline('assets/images/icon-tools2_64.png');
 }
 
-@media (max-resolution: 2dppx) {
+@media (min-resolution: 2dppx) {
   .box1 {
     background-image: inline('assets/images/icon-upload_128@2x.png');
   }
 }
 
-@media (max-resolution: 3dppx) {
+@media (min-resolution: 3dppx) {
   .box1 {
     background-image: inline('assets/images/icon-upload_192@3x.png');
   }
