@@ -11,6 +11,10 @@
   justify-content: center;
 }
 
+.icons::after {
+  content: '@';
+}
+
 [class^=box] {
   width: 64px;
   height: 64px;

@@ -5,6 +5,7 @@
     "color-no-invalid-hex": true,
 
     "font-family-name-quotes": "always-where-recommended",
+    "font-family-no-duplicate": true,
 
     "font-weight-notation": "numeric",
 
@@ -336,10 +337,6 @@
     "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-newline-after": "always",
 
-    "comment-empty-line-before": ["always", {
-      "except": ["first-nested"],
-      "ignore": ["after-comment", "stylelint-commands"]
-      }],
     "comment-no-empty": true,
     "comment-whitespace-inside": "always",
 

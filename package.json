@@ -38,6 +38,7 @@
     "postcss-custom-properties": "^5.0.2",
     "postcss-easy-import": "^2.0.0",
     "postcss-media-minmax": "^2.1.2",
+    "postcss-pseudoelements": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.4.0",
     "stylefmt": "^5.1.1",
