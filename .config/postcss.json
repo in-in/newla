@@ -5,6 +5,7 @@
     "postcss-custom-media",
     "postcss-media-minmax",
     "postcss-assets",
+    "postcss-color-function",
     "autoprefixer",
     "postcss-csso"
   ],
