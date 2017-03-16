@@ -12,6 +12,7 @@
     "prebuild:pug": "npm-run-all lint:pug",
     "build:pug": "pug src/*.pug -o dist/",
     "build:css": "postcss -c .config/postcss.config.js src/styles/*.css -d dist ",
+    "build:js": "cp src/scripts/script.js dist/",
     "image": "npm-run-all image:*",
     "image:optim": "imagemin src/assets/images/* --out-dir=dist/assets/images",
     "lint": "npm-run-all lint:*",
@@ -21,6 +22,7 @@
     "watch": "npm-run-all -p watch:*",
     "watch:pug": "chokidar 'src/**/*.pug' -c 'npm run build:pug'",
     "watch:css": "chokidar 'src/**/*.css' -i 'src/styles/lib' -c 'npm run build:css'",
+    "watch:js": "chokidar 'src/scripts/*.js' -c 'npm run build:js'",
     "watch:image": "chokidar 'src/assets/images/*' -c 'npm run image'",
     "serve": "browser-sync start -c .config/bs-config.js -s 'dist' -f 'dist'"
   },
