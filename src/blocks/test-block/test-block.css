@@ -1,21 +1,21 @@
 .test-block {
-  border: 1px solid;
+  border: 1px dashed;
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
 }
 
-.icons {
+.test-block__icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.icons::after {
+.test-block__icons::after {
   content: '@';
 }
 
-[class^=box] {
+.test-block__icon {
   width: 64px;
   height: 64px;
   box-sizing: border-box;
@@ -26,36 +26,33 @@
   background-repeat: no-repeat;
 }
 
-.box1 {
-  background-image: inline('assets/images/icon-upload_64.png');
+.test-block__icon1 {
+  background-image: inline('assets/images/icon1_64.png');
 }
 
-.box2 {
-  background-image: inline('assets/images/icon-desktop_64.png');
+.test-block__icon2 {
+  background-image: inline('assets/images/icon2_64.png');
 }
 
-.box3 {
-  background-image: inline('assets/images/icon-maps_64.png');
+.test-block__icon3 {
+  background-image: inline('assets/images/icon3_64.png');
 }
 
-.box4 {
-  background-image: inline('assets/images/icon-tools2_64.png');
+.test-block__icon4 {
+  background-image: inline('assets/images/icon4_64.png');
 }
 
-@media (min-resolution: 2dppx) {
-  .box1 {
-    background-image: inline('assets/images/icon-upload_128@2x.png');
+@each $i in 1, 2, 3, 4 {
+
+  @media (min-resolution: 2dppx) {
+    .test-block__icon$(i) {
+      background-image: inline('assets/images/icon$(i)_128@2x.png');
+    }
   }
-}
 
-@media (min-resolution: 3dppx) {
-  .box1 {
-    background-image: inline('assets/images/icon-upload_192@3x.png');
-  }
-}
-
-@media (--l) {
-  .test-block {
-    border: 1px dashed;
+  @media (min-resolution: 3dppx) {
+    .test-block__icon$(i) {
+      background-image: inline('assets/images/icon$(i)_192@3x.png');
+    }
   }
 }

@@ -4,6 +4,7 @@ module.exports = {
     require('postcss-custom-properties')(),
     require('postcss-custom-media')(),
     require('postcss-media-minmax')(),
+    require('postcss-each')(),
     require('postcss-assets')({
       'basePath': 'src/'
     }),

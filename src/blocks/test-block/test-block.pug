@@ -3,11 +3,11 @@ include ../picture/picture.pug
 mixin test-block()
   .test-block&attributes(attributes)
     p I am test-block
-    .icons
+    .test-block__icons
       p icons:
       each i, index in Array(4)
         - var x = index + 1
-        div(class='box' + x)
+        div(class='test-block__icon test-block__icon' + x)
     .sharp
       p responsive images:
       +picture([
