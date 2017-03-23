@@ -9,6 +9,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-image: linear-gradient(gray 50%, darkgray 0%), linear-gradient(darkgray 50%, gray 0%);
+  background-position: left, right;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
 }
 
 .test-block__icons::after {
@@ -20,7 +24,6 @@
   height: 64px;
   box-sizing: border-box;
   margin: .5em;
-  border: 1px solid #000;
   background-position: center bottom;
   background-size: 64px 64px;
   background-repeat: no-repeat;
