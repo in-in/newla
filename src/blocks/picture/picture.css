@@ -5,11 +5,11 @@
 
 .picture {
   width: 100%;
-}
 
-.picture__img {
-  display: block;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
+  &__img {
+    display: block;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

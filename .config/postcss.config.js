@@ -1,6 +1,9 @@
 module.exports = {
   plugins: [
     require('postcss-easy-import')(),
+    require('postcss-nesting')({
+      bubble: ['each']
+    }),
     require('postcss-custom-properties')(),
     require('postcss-custom-media')(),
     require('postcss-media-minmax')(),

@@ -3,59 +3,45 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 2em;
-}
 
-.test-block__icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-image: linear-gradient(gray 50%, darkgray 0%), linear-gradient(darkgray 50%, gray 0%);
-  background-position: left, right;
-  background-size: 50% 100%;
-  background-repeat: no-repeat;
-}
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image:
+      linear-gradient(gray 50%, darkgray 0%),
+      linear-gradient(darkgray 50%, gray 0%);
+    background-position: left, right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
 
-.test-block__icons::after {
-  content: '@';
-}
-
-.test-block__icon {
-  width: 64px;
-  height: 64px;
-  box-sizing: border-box;
-  margin: .5em;
-  background-position: center bottom;
-  background-size: 64px 64px;
-  background-repeat: no-repeat;
-}
-
-.test-block__icon1 {
-  background-image: inline('assets/images/icon1_64.png');
-}
-
-.test-block__icon2 {
-  background-image: inline('assets/images/icon2_64.png');
-}
-
-.test-block__icon3 {
-  background-image: inline('assets/images/icon3_64.png');
-}
-
-.test-block__icon4 {
-  background-image: inline('assets/images/icon4_64.png');
-}
-
-@each $i in 1, 2, 3, 4 {
-
-  @media (min-resolution: 2dppx) {
-    .test-block__icon$(i) {
-      background-image: inline('assets/images/icon$(i)_128@2x.png');
+    &::after {
+      content: '@';
     }
   }
 
-  @media (min-resolution: 3dppx) {
-    .test-block__icon$(i) {
-      background-image: inline('assets/images/icon$(i)_192@3x.png');
+  &__icon {
+    width: 64px;
+    height: 64px;
+    box-sizing: border-box;
+    margin: .5em;
+    background-color: snow;
+    background-position: center bottom;
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+  }
+
+  @each $i in 1, 2, 3, 4 {
+    &__icon$(i) {
+      background-image: inline('assets/images/icon$(i)_64.png');
+
+      @media (min-resolution: 2dppx) {
+        background-image: inline('assets/images/icon$(i)_128@2x.png');
+      }
+
+      @media (min-resolution: 3dppx) {
+        background-image: inline('assets/images/icon$(i)_192@3x.png');
+      }
     }
   }
 }
