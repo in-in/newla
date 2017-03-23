@@ -13,6 +13,9 @@ module.exports = {
     require('autoprefixer')({
       'browsers': 'last 10 versions'
     }),
+    require('css-mqpacker')({
+      sort: true
+    }),
     require('postcss-csso')()
   ]
 }

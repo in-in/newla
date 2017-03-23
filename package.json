@@ -30,6 +30,7 @@
     "autoprefixer": "^6.7.7",
     "browser-sync": "^2.18.8",
     "chokidar-cli": "^1.2.0",
+    "css-mqpacker": "^5.0.1",
     "imagemin-cli": "^3.0.0",
     "npm-run-all": "^4.0.1",
     "postcss-assets": "^4.1.0",
