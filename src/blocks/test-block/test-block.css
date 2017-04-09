@@ -31,6 +31,18 @@
     background-repeat: no-repeat;
   }
 
+  &--simple {
+    border: none;
+
+    & ^&__icons {
+      background: none;
+    }
+
+    & ^&__sharp {
+      display: none;
+    }
+  }
+
   @each $i in 1, 2, 3, 4 {
     &__icon$(i) {
       background-image: inline('assets/images/icon$(i)_64.png');
