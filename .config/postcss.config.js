@@ -2,7 +2,7 @@ module.exports = {
   plugins: [
     require('postcss-easy-import')(),
     require('postcss-nested-ancestors'),
-    require('postcss-nesting')({
+    require('postcss-nested')({
       bubble: ['each']
     }),
     require('postcss-custom-properties')(),

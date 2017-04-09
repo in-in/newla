@@ -34,11 +34,11 @@
   &--simple {
     border: none;
 
-    & ^&__icons {
+    ^&__icons {
       background: none;
     }
 
-    & ^&__sharp {
+    ^&__sharp {
       display: none;
     }
   }
