@@ -5,9 +5,9 @@
     "stylelintignore": ".config/.stylelintignore"
   },
   "scripts": {
-    "start": "npm-run-all clean build -p watch serve",
+    "start": "npm-run-all build -p watch serve",
     "clean": "rm -rf dist/",
-    "build": "npm-run-all build:* image",
+    "build": "npm-run-all clean build:* image",
     "prebuild:css": "npm-run-all lint:css",
     "prebuild:pug": "npm-run-all lint:pug",
     "build:pug": "pug src/*.pug -o dist/",
