@@ -5,6 +5,7 @@
     "stylelintignore": ".config/.stylelintignore"
   },
   "scripts": {
+    "init-start": "npm i && rimraf .git/ && git init",
     "start": "npm-run-all build -p watch serve --silent",
     "clean": "rimraf dist/",
     "build": "npm-run-all clean build:* image",
