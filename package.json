@@ -6,7 +6,7 @@
   },
   "scripts": {
     "start": "npm-run-all build -p watch serve --silent",
-    "clean": "rm -rf dist/",
+    "clean": "rimraf dist/",
     "build": "npm-run-all clean build:* image",
     "prebuild:css": "npm-run-all lint:css",
     "prebuild:pug": "npm-run-all lint:pug",
@@ -47,6 +47,7 @@
     "postcss-pseudoelements": "^4.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.4.0",
+    "rimraf": "^2.6.1",
     "stylelint": "^7.10.1"
   }
 }
