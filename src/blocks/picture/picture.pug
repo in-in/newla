@@ -1,5 +1,5 @@
 mixin picture(images)
-  picture.picture&attributes(attributes)
+  +b.PICTURE.picture&attributes(attributes)
     - var path = 'assets/images/'
     each img in images
       each width in img.width
@@ -8,6 +8,6 @@ mixin picture(images)
           + path + img.name + '_' + (width * 2) + '@2x' + '.jpg' + ' 2x' + ', '
           + path + img.name + '_' + (width * 3) + '@3x' + '.jpg' + ' 3x'
           media='(min-width: ' + width + 'px)')
-      img.picture__img(
+      +e.IMG.img(
         src=path + img.name + '_' + img.width[0] + '.jpg'
         alt='')
