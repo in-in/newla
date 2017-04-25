@@ -11,7 +11,7 @@ git clone git@github.com:in-in/newla.git project && cd project
 ### Create a new empty Git and install the packages
 
 ```bash
-init-start
+npm run init-start
 ```
 
 ### Run and watch
