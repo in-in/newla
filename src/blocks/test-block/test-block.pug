@@ -2,14 +2,14 @@ include ../picture/picture.pug
 
 mixin test-block()
   +b.test-block&attributes(attributes)
-    p I am test-block
+    +e.P.subtitle I am test-block
     +e.icons
       p icons:
       each i, index in Array(4)
         - var x = index + 1
         +e.icon(class=`test-block__icon${x}`)
     +e.sharp
-      p responsive images:
+      +e.P.subtitle responsive images:
       +picture([
         {
           "name": "image1",

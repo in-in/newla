@@ -1,8 +1,11 @@
 .test-block {
   border: 1px dashed;
   text-align: center;
-  text-transform: uppercase;
   font-size: 2em;
+
+  &__subtitle {
+    text-transform: uppercase;
+  }
 
   &__icons {
     display: flex;
