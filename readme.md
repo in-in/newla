@@ -20,4 +20,10 @@ npm run init-start
 npm start
 ```
 
+### Easy update all dependencies
+
+```bash
+npm run ncu
+```
+
 If you need some sample code, look at the `example` branch
