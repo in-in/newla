@@ -4,6 +4,7 @@
     "stylelint": ".stylelintrc.json",
     "stylelintignore": ".config/.stylelintignore"
   },
+  "browserslist": ["last 2 versions"],
   "scripts": {
     "init-start": "npm i && rimraf .git/ && git init",
     "start": "npm-run-all build -p watch serve --silent",

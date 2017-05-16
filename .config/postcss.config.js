@@ -14,9 +14,7 @@ module.exports = {
     }),
     require('postcss-color-function')(),
     require('postcss-pseudoelements')(),
-    require('autoprefixer')({
-      'browsers': 'last 10 versions'
-    }),
+    require('autoprefixer')(),
     require('css-mqpacker')({
       sort: true
     }),
